@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#top_banner {
+    height: 20px;
+    line-height: 15px;
+    background: #ddd;
+}
+
+#top_banner .container {
+    justify-content: right;
+}
+
+#top_banner .container ul {
+    display: flex;
+    gap: 30px;
+}
+
+#top_banner ul li a {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+#header {
+    height: 100px;
+    border-bottom: 1px solid #000;
+}
+
+#header .container {
+    justify-content: space-between;
+}
+
+#header .container h1 {
+    padding: 27px 0;
+}
+
+#header .gnb ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+    line-height: 100px;
+}
+
+#header .gnb>ul>li>ul {
+    display: none;
+    line-height: 50px;
+}
+
+#header .gnb>ul>li:hover>ul {
+    display: block;
+}
+
+#header .gnb>ul>li>ul {
+    position: absolute;
+    background: #fff;
+    z-index: 999;
+}
+
+#header i {
+    display: none;
+}
+
+#main_visual {
+    position: relative;
+}
+
+.main_slider .slick-dots {
+    position: absolute;
+    inset: 90% auto auto 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_slider .slick-dots li {
+    display: inline-block;
+}
+
+.main_slider .slick-dots li button {
+    outline: none;
+    border: none;
+    font-size: 0;
+    width: 150px;
+    height: 5px;
+    background: #fff;
+}
+
+.main_slider .slick-dots li.slick-active button {
+    background: #000;
+}
