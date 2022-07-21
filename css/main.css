@@ -154,12 +154,14 @@ p {
 
 #style_package .container h2 {
     font-size: 35px;
+    font-weight: 700;
     text-align: center;
     margin: 0 0 10px 0;
 }
 
 #style_package .container p {
     font-size: 15px;
+    font-weight: 300;
     text-align: center;
     margin: 0 0 50px 0;
 }
@@ -170,6 +172,7 @@ p {
 
 #style_package .container figure h2 {
     font-size: 17px;
+    font-weight: 500;
     text-align: left;
     margin: 0 0 10px 0;
 }
@@ -299,6 +302,7 @@ p {
 #event .container {
     display: block;
     padding: 100px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 #footer {
@@ -306,17 +310,114 @@ p {
 }
 
 #footer .container {
-    line-height: 100px;
+    line-height: 50px;
     justify-content: space-between;
 }
 
 #footer .container ul {
     display: flex;
-    gap: 30px;
+    gap: 10px;
 }
 
 #footer .container ul li a {
+    font-size: 13px;
     color: #fff;
 }
 
-@media (max-width: 768px) {}
+#example {
+    padding: 100px 0;
+}
+
+#example .container {
+    display: block;
+    text-align: center;
+}
+
+#example .container h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+#example .container p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+}
+
+#example .container .example_inner {
+    display: flex;
+    gap: 30px;
+}
+
+#example .container .example_inner img {
+    margin: 0 0 20px 0;
+}
+
+#example .container .example_inner h2 {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    #main_menu {
+        position: relative;
+    }
+
+    #main_menu .container {
+        margin: 0 40px;
+    }
+
+    .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 200px);
+        height: 100vh;
+        z-index: 999;
+        background: #ff0;
+        line-height: 40px;
+        transition: 0.5s;
+    }
+
+    .gnb.on {
+        left: 0;
+    }
+
+    .gnb a {
+        display: block;
+    }
+
+    .gnb ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+    }
+
+    #main_menu .mbtn i {
+        position: absolute;
+        display: block;
+        padding: 5px;
+        inset: 50% auto auto 90%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+        background: #ddd;
+        border-radius: 10px;
+    }
+
+    #main_visual .main_slider .slick-dots {
+        display: block;
+    }
+
+    #main_visual .main_slider .slick-dots li {
+        width: 50px;
+    }
+}

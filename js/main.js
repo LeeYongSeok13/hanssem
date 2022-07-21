@@ -1,4 +1,8 @@
 $(function () {
+
+    $('.mbtn').on('click', function () {
+        $('.gnb').toggleClass('on')
+    })
     $('.main_slider').slick({
         arrows: false,
         dots: true,
