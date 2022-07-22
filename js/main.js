@@ -2,6 +2,19 @@ $(function () {
 
     $('.mbtn').on('click', function () {
         $('.gnb').toggleClass('on')
+    });
+
+    $('.gnb>ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
+            e.preventDefault();
+            $('.gnb>ul>li>ul').stop().slideUp();
+            $(this).next().stop().slideToggle();
+        }
+    });
+
+    $(window).on('resize', function () {
+        $('.gnb').removeClass('on')
+        $('.gnb>ul>li>ul').removeAttr('style')
     })
     $('.main_slider').slick({
         arrows: false,

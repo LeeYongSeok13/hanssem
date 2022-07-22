@@ -29,6 +29,9 @@
                         <img src="./img/logo_hs.png" alt="">
                     </h1>
                     <nav class="gnb">
+                        <h1>
+                            <img src="./img/logo_hs.png" alt="">
+                        </h1>
                         <ul>
                             <li>
                                 <a href="">전체상품</a>
@@ -67,17 +70,61 @@
                     <div class="mbtn">
                         <i class="xi-bars"></i>
                     </div>
+                    <div class="search">
+                        <form action="javascript:searchAction()">
+                            <input type="text" , placeholder="검색">
+                            <button>
+                                <i class="xi-search"></i>
+                            </button>
+                        </form>
+                        <script>
+                            function searchAction() {
+                                var searchValue = $('.search input').val();
+                                if (searchValue.length < 3) {
+                                    alert('3글자 이상 검색이 가능합니다.');
+                                } else {
+                                    alert(searchValue);
+                                }
+                            }
+                        </script>
+                    </div>
                 </div>
             </section>
         </header>
         <main id="main">
             <section id="main_visual">
                 <div class="main_slider">
-                    <img src="./img/main_visual01.jpg" alt="">
-                    <img src="./img/main_visual02.jpg" alt="">
-                    <img src="./img/main_visual03.jpg" alt="">
-                    <img src="./img/main_visual04.jpg" alt="">
-                    <img src="./img/main_visual05.jpg" alt="">
+                    <figure class="itm01">
+                        <div class="container">
+                            <div class="inner">
+                                <h2>라이프 스타일 트렌드</h2>
+                                <p>새로운 봄, 한샘이 제안하는
+                                    <br />라이프 스타일 트렌드를 만나보세요
+                                </p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="itm02">
+                        <div class="container">
+                            <div class="inner">
+                                <h2>NC대전 유성점 그랜드오픈
+                                </h2>
+                                <p>대전지역 최대규모 리빙파크
+                                    <br />여러가지 신상 가구 스타일을 체험가능한 체험관 OPEN
+                                </p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="itm03">
+                        <div class="container">
+                            <div class="inner">
+                                <h2>한샘 시즌오프</h2>
+                                <p>100여개 품목 UP TO 60%할인
+                                    <br />시즌오프 소파 UP TO 80만원 할인
+                                </p>
+                            </div>
+                        </div>
+                    </figure>
                 </div>
                 <div class="angle">
                     <i class="xi-angle-left"></i>
