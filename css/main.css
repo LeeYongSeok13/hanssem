@@ -164,8 +164,6 @@ p {
     line-height: 20px;
 }
 
-
-
 #main_visual .main_slider .slick-dots {
     position: absolute;
     inset: 90% auto auto 50%;
@@ -248,19 +246,9 @@ p {
     display: inline-block;
 }
 
-.livingroom_inner {
+#style_package .container .package_slider {
     display: flex;
-    gap: 20px;
-}
-
-.bedroom_inner {
-    display: flex;
-    gap: 20px;
-}
-
-.package_inner {
-    display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .package_slider .slick-dots {
@@ -287,6 +275,7 @@ p {
 
 .package_slider .slick-dots li.slick-active button {
     width: 30px;
+    background: #f00;
 }
 
 .package_arrow i {
@@ -372,25 +361,6 @@ p {
     border-bottom: 1px solid #ddd;
 }
 
-#footer {
-    background: #000;
-}
-
-#footer .container {
-    line-height: 50px;
-    justify-content: space-between;
-}
-
-#footer .container ul {
-    display: flex;
-    gap: 10px;
-}
-
-#footer .container ul li a {
-    font-size: 13px;
-    color: #fff;
-}
-
 #example {
     padding: 100px 0;
 }
@@ -414,17 +384,33 @@ p {
 
 #example .container .example_inner {
     display: flex;
-    gap: 30px;
-}
-
-#example .container .example_inner img {
-    margin: 0 0 20px 0;
+    gap: 50px;
 }
 
 #example .container .example_inner h2 {
+    margin: 20px 0 0 0;
     font-size: 17px;
     font-weight: 500;
     text-align: left;
+}
+
+#footer {
+    background: #000;
+}
+
+#footer .container {
+    line-height: 50px;
+    justify-content: space-between;
+}
+
+#footer .container ul {
+    display: flex;
+    gap: 10px;
+}
+
+#footer .container ul li a {
+    font-size: 13px;
+    color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -460,6 +446,7 @@ p {
 
     .gnb h1 {
         display: block;
+        border-bottom: 1px solid #ddd;
     }
 
     .gnb.on {
@@ -541,23 +528,25 @@ p {
         margin: 0 40px;
     }
 
-    #style_package .container .livingroom_inner {
-        display: block;
+    .package_slider .slick-dots li button {
+        outline: none;
+        border: none;
+        width: 5px;
+        height: 5px;
+        margin: 0 2px;
+        font-size: 0;
+        border-radius: 10px;
+        background: #000;
+        transition: 0.5s;
     }
 
-    #style_package .container .bedroom_inner {
-        display: block;
-    }
-
-    #style_package .container .package_inner {
-        display: block;
+    .package_slider .slick-dots li.slick-active button {
+        width: 5px;
     }
 
     #style_package .package_arrow {
         display: none;
     }
-
-
 
     #tab_content {
         width: auto;
@@ -573,5 +562,10 @@ p {
         font-size: 11px;
         line-height: 20px;
     }
+
+    #reservation {
+        display: none;
+    }
+
 
 }
