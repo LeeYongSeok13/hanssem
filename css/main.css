@@ -296,63 +296,70 @@ p {
 }
 
 #tab_content {
+    position: relative;
     padding: 100px 0;
 }
 
-#tab_content .container {
-    display: block;
-}
-
-#tab_content .tab_menu {
+.tab_menu {
     display: flex;
-    margin: 0 0 50px 0;
-}
-
-#tab_content .tab_menu>dt {
-    flex: 1;
+    width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
-#tab_content .tab_menu>dt a {
-    display: block;
-    line-height: 30px;
-    padding: 5px 0;
+
+.tab_menu li {
+    flex: 1;
+    padding: 10px 5px;
+    margin: 0 0 50px 0;
     background: #ddd;
     color: #000;
-    border: 1px solid #fff
+    border: 1px solid #fff;
+    cursor: pointer;
 }
 
-#tab_content .tab_menu>dt.on a {
+.tab_menu li.on {
     background: #fff;
     color: #000;
     border: 1px solid #000;
 }
 
-.tab_inner>div {
+.tab_content {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.tab_content>div>div {
+    position: absolute;
+    visibility: hidden;
+}
+
+.tab_content>div.on>div {
+    visibility: visible;
+}
+
+.tab_content figure img {
+    margin: 0 0 20px 0;
+}
+
+.tab_content figure h2 {
+    margin: 0 0 10px 0;
+}
+
+.care {
     display: flex;
     gap: 30px;
 }
 
-.tab_inner>div figure {
-    display: none;
+.furniture {
+    display: flex;
+    gap: 30px;
 }
 
-.tab_inner>div.on figure {
-    display: block;
-}
-
-.tab_inner dd figure img {
-    margin: 0 0 10px 0;
-    border: 1px solid #ddd;
-}
-
-.tab_inner dd figure h2 {
-    margin: 0 0 10px 0;
-    text-align: left;
-}
-
-.tab_inner dd figure p {
-    text-align: left;
+.remodel {
+    display: flex;
+    gap: 30px;
 }
 
 #event .container {
@@ -553,8 +560,12 @@ p {
         margin: 0 40px;
     }
 
-    #footer .container {
-        display: flex;
+    .tab_menu {
+        width: auto;
+    }
+
+    .tab_content {
+        width: auto;
     }
 
     #footer .container ul {
