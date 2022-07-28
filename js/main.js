@@ -84,4 +84,29 @@ $(function () {
         }
     });
 
+    var exampleSlider = $('.example_inner');
+    var exampleTextSlider = $('.example_text');
+    var exampleSlickOptions = {
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.example_text',
+    }
+    var exampleTextOptions = {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.example_inner',
+    }
+    $(window).on('load resize', function () {
+        if ($(window).width() > 768) {
+            exampleSlider.slick('unslick');
+            exampleTextSlider.slick('unslick');
+        } else {
+            exampleSlider.not('.slick-initialized').slick(exampleSlickOptions);
+            exampleSlider.not('.slick-initialized').slick(exampleTextOptions);
+        }
+    })
+
 });
