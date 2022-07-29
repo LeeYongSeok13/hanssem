@@ -252,7 +252,7 @@ p {
 
 .package_slider .slick-dots {
     position: absolute;
-    inset: 100% auto auto 50%;
+    inset: 95% auto auto 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -284,6 +284,10 @@ p {
     font-size: 55px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.package_arrow i:hover {
+    color: #f00;
 }
 
 .package_arrow i:nth-child(1) {
@@ -355,11 +359,74 @@ p {
     margin: 0 0 10px 0;
 }
 
+#event {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#event h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+}
+
 #event .container {
     display: block;
-    padding: 100px 0;
-    border-bottom: 1px solid #ddd;
 }
+
+#event .container {
+    position: relative;
+}
+
+#event .slick-dots {
+    margin: 10px 0 0 0;
+}
+
+#event .slick-dots li {
+    display: inline-block;
+}
+
+#event .slick-dots li button {
+    outline: none;
+    border: 1px solid #000;
+    margin: 0 5px;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+#event .slick-dots li.slick-active button {
+    background: #f00;
+}
+
+#event .event_angle i {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+    cursor: pointer;
+}
+
+#event .event_angle i:hover {
+    color: #369
+}
+
+#event .event_angle i:nth-child(1) {
+    margin: 0 0 0 -700px;
+}
+
+#event .event_angle i:nth-child(2) {
+    margin: 0 0 0 700px;
+}
+
 
 #example {
     padding: 100px 0;
@@ -387,14 +454,8 @@ p {
     gap: 50px;
 }
 
-#example .container .example_inner h2 {
-    margin: 20px 0 0 0;
-    font-size: 17px;
-    font-weight: 500;
-    text-align: center;
-}
-
 .example_inner figure {
+    position: relative;
     overflow: hidden;
     margin: 0 0 20px 0;
 }
@@ -410,12 +471,14 @@ p {
     filter: grayscale(0);
 }
 
-.example_text div {
-    display: flex;
-}
-
-.example_text div strong {
-    flex: 1;
+#example .container .example_inner strong {
+    position: absolute;
+    font-size: 21px;
+    font-weight: 500;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
 }
 
 #content {
@@ -592,11 +655,20 @@ p {
         width: 10px;
         height: 10px;
         margin: 0 10px;
-        border-radius: 50%;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    #main_visual .main_slider .slick-dots li.slick-active button {
+        width: 30px;
     }
 
     #main_visual .angle {
         display: none;
+    }
+
+    #style_package {
+        padding: 50px 0;
     }
 
     #style_package .container {
@@ -607,8 +679,8 @@ p {
     .package_slider .slick-dots li button {
         outline: none;
         border: none;
-        width: 5px;
-        height: 5px;
+        width: 10px;
+        height: 10px;
         margin: 0 2px;
         font-size: 0;
         border-radius: 10px;
@@ -617,7 +689,7 @@ p {
     }
 
     .package_slider .slick-dots li.slick-active button {
-        width: 5px;
+        width: 10px;
     }
 
     #style_package .package_arrow {
@@ -628,6 +700,7 @@ p {
         display: flex;
         width: auto;
         margin: 0 40px;
+        padding: 50px 0;
     }
 
     .tab_menu {
@@ -672,19 +745,17 @@ p {
     #example {
         width: auto;
         margin: 0 40px;
+        padding: 50px 0;
     }
 
-    #example .example_inner {
+    #example .container .example_inner {
         display: block;
-    }
-
-    #example .example_inner .slick-dots li {
-        display: inline-block;
     }
 
     #content {
         width: auto;
         margin: 0 40px;
+        padding: 50px 0;
     }
 
     #content .container {
@@ -706,6 +777,19 @@ p {
     #content .container strong {
         font-size: 13px;
         font-weight: 300;
+    }
+
+    #event {
+        padding: 50px 0;
+    }
+
+    .event_angle {
+        display: none;
+    }
+
+    #footer .container {
+        margin: 0 40px;
+        justify-content: space-around;
     }
 
     #footer .container ul {
